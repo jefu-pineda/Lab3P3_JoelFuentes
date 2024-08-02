@@ -5,23 +5,25 @@ using namespace std;
 
 //metodos ejercicio 1
 void generarTrianguloDePascal(int filas, int* array, int contadorFilas = 1) {
+    int* copy = new int[filas];
     if (contadorFilas == filas) {
         delete[] array;
+        delete[] copy;
         return;
     }
     else {
         array[0] = 1;
-        array[contadorFilas - 1] = 1;
-        for (int columna = 1; columna < contadorFilas - 1; columna += 2) {
-            if (contadorFilas % 2 == 0)
-            {
-                array[columna] = array[columna - 1] + array[columna];
-                array[columna+1] = array[columna-1] + array[columna];
-            }
-            else {
-                array[columna] = array[columna - 1] + array[columna+1];
-            }
+        array[contadorFilas-1] = 1;
+        for (int i = 0; i < filas; i++)
+        {
+            copy[i] = array[i];
         }
+
+        for (int i = 1; i < contadorFilas-1; i++)
+        {
+            array[i] = copy[i - 1] + copy[i];
+        }
+        array[contadorFilas - 1] = 1;
         for (int i = 0; i < contadorFilas; i++)
         {
             cout << array[i] << " ";
