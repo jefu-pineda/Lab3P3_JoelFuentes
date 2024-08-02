@@ -1,3 +1,5 @@
 ﻿  Lab3P3_JoelFuentes.cpp
-C:\Users\jefue\OneDrive\Lab. Progra III\Lab (153,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\jefue\OneDrive\Lab. Progra III\Lab (128,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\jefue\OneDrive\Lab. Progra III\Lab (212,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\jefue\OneDrive\Lab. Progra III\Lab (72,1): warning C4715: 'generarEcuacion': not all control paths return a value
   Lab3P3_JoelFuentes.vcxproj -> C:\Users\jefue\OneDrive\Lab. Progra III\Lab #3\Lab3P3_JoelFuentes\x64\Debug\Lab3P3_JoelFuentes.exe
