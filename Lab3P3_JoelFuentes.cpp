@@ -212,6 +212,7 @@ int main()
     srand(time(NULL));
     cout << "Buenas Tardes :)" << endl;
     menu();
+    cout << "DaZu the goat" << endl;
 }
 
 
