@@ -10,15 +10,24 @@ void generarTrianguloDePascal(int filas, int* array, int contadorFilas = 1) {
         return;
     }
     else {
-        for (int i = 0; i < contadorFilas; i++)
-        {
-            array[i] = 1;
-            array[i] = array[i] + contadorFilas - 1;
+        array[0] = 1;
+        array[contadorFilas - 1] = 1;
+        for (int columna = 1; columna < contadorFilas - 1; columna += 2) {
+            if (contadorFilas % 2 == 0)
+            {
+                array[columna] = array[columna - 1] + array[columna];
+                array[columna+1] = array[columna-1] + array[columna];
+            }
+            else {
+                array[columna] = array[columna - 1] + array[columna+1];
+            }
         }
         for (int i = 0; i < contadorFilas; i++)
         {
             cout << array[i] << " ";
         }
+
+
         cout << endl;
         generarTrianguloDePascal(filas, array, ++contadorFilas);
     }
