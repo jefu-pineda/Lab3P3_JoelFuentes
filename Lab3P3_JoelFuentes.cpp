@@ -89,7 +89,6 @@ void rectaPorDosPuntos() {
     else {
         cout << "Ingrese la posicion punto #2: ";
         int punto2; cin >> punto2;
-        cout << endl;
         if (punto2 > cantidad) {
             cout << "Punto 2 no es valido..." << endl;
             return;
@@ -119,6 +118,8 @@ void operacionesDeNumeros() {
         case 2:
             break;
         case 0:
+            cout << "Volviendo..." << endl;
+            bandera = false;
             break;
         default:
             break;
